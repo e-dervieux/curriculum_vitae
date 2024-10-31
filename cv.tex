@@ -1,0 +1,113 @@
+% !TeX program = lualatex
+% !TeX TXS-program:bibliography = txs:///biber
+% !TeX encoding = utf8
+% !TeX spellcheck = fr_FR
+\PassOptionsToPackage{colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=blue}{hyperref}
+\documentclass[a4paper, 11pt]{moderncv}
+
+\usepackage[french]{babel}
+\usepackage[margin=1cm]{geometry}
+\moderncvstyle{classic}
+\moderncvcolor{blue}
+\nopagenumbers
+\setlength{\hintscolumnwidth}{2.9cm}
+
+\name{Emmanuel}{Dervieux}
+\title{Ingénieur de recherche, PhD}
+\address{55 lieu dit Le Chesnais}{35690 Acigné, France}
+\phone{(+33)6~04~53~52~53}
+\email{emmanuel.dervieux@gmail.com}
+%\homepage{www.johndoe.com}
+\extrainfo{\href{https://www.researchgate.net/profile/Emmanuel-Dervieux-2}{ResearchGate}, \href{https://scholar.google.fr/citations?user=DCR_h9YAAAAJ\&hl=fr}{Scholar}, \href{https://orcid.org/0000-0003-4649-4037}{ORCID}}
+\social[github]{e-dervieux}
+\photo[80px][0cm]{figures/profil}
+
+%\quote{Some quote}
+
+% Fint tune photo position
+\usepackage{xpatch}
+\xpatchcmd{\makecvhead}{%
+	\usebox{\makecvheadpicturebox}\fi%
+}{%
+	\raisebox{-0.11\height}{\usebox{\makecvheadpicturebox}}\fi%
+}{}{}
+
+% Custom subsection
+\makeatletter
+\NewDocumentCommand{\mysubsection}{sm}{%
+	\par\addvspace{1ex}%
+	\phantomsection{}% reset the anchor for hyperrefs
+	\addcontentsline{toc}{subsection}{#2}%
+	{\strut\raggedleft\raisebox{\baseletterheight}{\color{color1}\rule{0.5\hintscolumnwidth}{0.95ex}}\quad}{\strut\subsectionstyle{#2}}%
+	\par\nobreak\addvspace{.5ex}\@afterheading}% to avoid a pagebreak after the heading
+\makeatother
+
+\usepackage[%
+backend=biber,
+sorting=none,
+style=numeric-comp,
+]{biblatex}
+\addbibresource{clean_bibliography.bib}
+
+\begin{document}
+	\maketitle
+	
+	% Marge négative entre le titre et la partie expérience, pour gagner de la place
+	\vspace*{-2.5\baselineskip}
+	
+	\section{Formation initiale}
+	
+	% pour votre cursus scolaire
+	\cvitem{2012}{Obtention du \textbf{baccalauréat scientifique} option Science de l’Ingénieur (mention Très Bien)}
+	\cvitem{2012--2014}{Classe préparatoire aux grandes écoles \textbf{PTSI-PT} au Lycée Paul Constans à Montluçon}
+	\cvitem{2014--2018}{Étudiant à \textbf{Supélec}, école d’ingénieur focalisée sur les télécommunications, l’électronique, le traitement du signal, la physique statistique, le management et la programmation.\newline{}(\textbf{Année de césure de 2016 à 2017})\newline{}Majeure de 3ème année \textbf{SERI} (Systèmes Embarqués, Réseaux et Image)}
+	
+	\section{Expérience professionnelle}
+	
+	\cvitem{2009 (2~mois)}{Réparateur chez Coudrier S.A.R.L., magasin d’électroménager à Brassac-Les-Mines.\newline{}Remise en service de postes de télévision cathodiques.}
+	
+	\cvitem{2010-2014 (étés)}{Ouvrier agricole pour la castration des maïs au sein de l’E.A.R.L. de Lemane.}
+	
+	\cvitem{2015}{Employé un mois dans la restauration à l’Hôtel trois étoiles Halftime à Nara au \textbf{Japon}}
+	
+	\cvitem{2016 (6~mois)}{Stage long au poste d’ingénieur R\&D chez 3DSoundLabs (startup rennaise spécialisé dans l’écoute binaurale). Design électronique, traitement du signal, ainsi qu’acquisition et interpolation de HRTFs (obtention de la réponse impulsionnelle par sweep exponentiel et déconvolution, et interpolation \textit{via} réseaux de neurones et KNNs).}
+	
+	\cvitem{2017 (4 mois)}{Stage long à l’Austrian Institute of Technology à Vienne (\textbf{Autriche}) au laboratoire d’électrotechnique de l’Energy Base. Caractérisation de modules IGBTs pour un onduleur 4 phases (3P+N), bobinage de transformateurs sur-mesure, conception d'un système d'application de pâte thermique par screen-printing, et conception d'une alimentation de microcontrôleur.}
+	
+	\cvitem{2018 (6 mois)}{Stage long en recherche en vidéo-compression au sein de l’équipe VAADER (laboratoire IETR au sein de l’INSA de Rennes), utilisation de CNNs pour la découpe en Quad / Ternary trees au sein de l’encodeur VVC.}
+	\cvitem{2018--2020}{\textbf{Ingénieur en Recherche et Développement} chez Biosency, entreprise développant une solution de télésuivi en ambulatoire pour les patients en insuffisance respiratoire (DM).}
+	
+	\cvitem{2020 - \textit{Présent}}{\textbf{Thèse de doctorat} sur la caractérisation transcutanée non-invasive du contenu sanguin en dioxyde de carbone. Partenariat académique / industriel entre Biosency, l’université de Strasbourg (laboratoire ICUBE, CNRS / Unistra) et l’Université de Bretagne Occidentale (laboratoire ORPHY, UBO). Le manuscrit de thèse est \href{https://github.com/e-dervieux/phd_thesis/releases/download/manuscript/thesis_v1.0.pdf}{disponible en ligne} et a donné lieu à la publication de quatre articles de journal\cite{dervieux2020, dervieux2022, dervieux2023rate, dervieux2024phase} et un article de conférence\cite{dervieux2024newcas}.}
+	
+	\cvitem{2022 – \textit{Présent}}{\textbf{Missions d'enseignement} à Télécom Physique Strasboug (TPS) et à l’UBO. CMs sur l’architecture des systèmes à microprocesseurs, et initiation à l’impression 3D. TPs de microcontrôleur (Arduino) et FPGA (Quartus).}
+
+	\newpage
+	
+	\section{Compétences}
+	
+	\mysubsection{Linguistiques}
+	
+	\cvdoubleitem{\textbf{Anglais}}{Bilingue, TOEFL IBT}{\textbf{Allemand}}{Niveau B1}
+	\cvitem{\textbf{Japonais}}{Niveau A2, deux mois de stage au Japon (Stage linguistique suivi d’un stage en hôtellerie)}
+	
+	\mysubsection{Techniques}
+	
+	Programmation~: \textbf{Python}, \textbf{LabView}, Git, R, MatLab, C/C++, VHDL, HTML/CSS.
+	
+	Électronique: \textbf{KiCAD}, \textbf{LTSpice}, soudure, test.
+	
+	Conception mécanique: \textbf{Onshape / SolidWorks}, MeshLab, impression 3D FDM (notions de SLA), découpe laser, ébénisterie.
+	
+	Rédaction et présentation graphique: \textbf{LaTeX / TikZ / PGFPlots}, \textbf{Inkscape}, manim, Gimp, suite Office.
+	
+	\mysubsection{Humaines et extra-professionnelles}
+	
+	Expérience associative en tant que \textbf{président des associations Soleils} (SOLidarité des Elèves Ingénieurs avec Le Sud) et du \textbf{Fest-Noz de Supélec}.
+	
+	Brevet d’Initiation Aéronautique (BIA), formation de Sauveteur Secouriste du Travail (SST), permis A et B.
+	
+	Guitariste depuis l’enfance, débutant en Low Whistle et en batterie, chanteur (soliste et en chorale), grimpeur, photographe et cinéaste amateur (réalisation de courts-métrages).
+	
+	\printbibliography
+	
+\end{document}
