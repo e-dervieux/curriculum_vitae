@@ -4,6 +4,7 @@
 % !TeX spellcheck = fr_FR
 \PassOptionsToPackage{colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=blue}{hyperref}
 \documentclass[a4paper, 11pt]{moderncv}
+\usepackage{amsmath}
 
 \usepackage[french]{babel}
 \usepackage[margin=1cm]{geometry}
@@ -13,7 +14,7 @@
 \setlength{\hintscolumnwidth}{2.9cm}
 
 \name{Emmanuel}{Dervieux}
-\title{Ingénieur de recherche, PhD}
+\title{Ingénieur de recherche}
 \address{55 lieu dit Le Chesnais}{35690 Acigné, France}
 \phone{(+33)6~04~53~52~53}
 \email{emmanuel.dervieux@gmail.com}
@@ -46,6 +47,7 @@
 backend=biber,
 sorting=none,
 style=numeric-comp,
+maxbibnames=99,
 ]{biblatex}
 \addbibresource{clean_bibliography.bib}
 
@@ -60,29 +62,36 @@ style=numeric-comp,
 	% pour votre cursus scolaire
 	\cvitem{2012}{Obtention du \textbf{baccalauréat scientifique} option Science de l’Ingénieur (mention Très Bien)}
 	\cvitem{2012--2014}{Classe préparatoire aux grandes écoles \textbf{PTSI-PT} au Lycée Paul Constans à Montluçon}
-	\cvitem{2014--2018}{Étudiant à \textbf{Supélec}, école d’ingénieur focalisée sur les télécommunications, l’électronique, le traitement du signal, la physique statistique, le management et la programmation.\newline{}(\textbf{Année de césure de 2016 à 2017})\newline{}Majeure de 3ème année \textbf{SERI} (Systèmes Embarqués, Réseaux et Image)}
+	\cvitem{2014--2018}{Étudiant à \textbf{Supélec}, école d’ingénieur focalisée sur les télécommunications, l’électronique, le traitement du signal, la physique statistique, le management et la programmation.\newline{}(\textbf{Année de césure de 2016 à 2017})\newline{}Majeure de 3$^\text{e}$ année \textbf{SERI} (Systèmes Embarqués, Réseaux et Image)}
 	
 	\section{Expérience professionnelle}
 	
-	\cvitem{2009 (2~mois)}{Réparateur chez Coudrier S.A.R.L., magasin d’électroménager à Brassac-Les-Mines.\newline{}Remise en service de postes de télévision cathodiques.}
+	\cvitem{2009 (2~mois)}{Réparateur chez Poulignier S.A.R.L., magasin d’électroménager à Brassac-Les-Mines.\newline{}Remise en service de postes de télévision cathodiques.}
 	
 	\cvitem{2010-2014 (étés)}{Ouvrier agricole pour la castration des maïs au sein de l’E.A.R.L. de Lemane.}
 	
-	\cvitem{2015}{Employé un mois dans la restauration à l’Hôtel trois étoiles Halftime à Nara au \textbf{Japon}}
+	\cvitem{2015}{Employé un mois dans la restauration à l’Hôtel trois étoiles Halftime à Nara au \textbf{Japon}.}
 	
-	\cvitem{2016 (6~mois)}{Stage long au poste d’ingénieur R\&D chez 3DSoundLabs (startup rennaise spécialisé dans l’écoute binaurale). Design électronique, traitement du signal, ainsi qu’acquisition et interpolation de HRTFs (obtention de la réponse impulsionnelle par sweep exponentiel et déconvolution, et interpolation \textit{via} réseaux de neurones et KNNs).}
+	\cvitem{2016 (6~mois)}{Stage long au poste d’ingénieur R\&D chez 3DSoundLabs (startup rennaise spécialisé dans l’écoute binaurale). Design électronique (circuits de multiplexage sous KiCAD) et traitement du signal à des fins d’acquisition et interpolation de HRTFs~: obtention de la réponse impulsionnelle par sweep exponentiel et déconvolution, interpolation \textit{via} réseaux de neurones simples et KNNs.}
 	
-	\cvitem{2017 (4 mois)}{Stage long à l’Austrian Institute of Technology à Vienne (\textbf{Autriche}) au laboratoire d’électrotechnique de l’Energy Base. Caractérisation de modules IGBTs pour un onduleur 4 phases (3P+N), bobinage de transformateurs sur-mesure, conception d'un système d'application de pâte thermique par screen-printing, et conception d'une alimentation de microcontrôleur.}
+	\cvitem{2017 (4 mois)}{Stage long à l’Austrian Institute of Technology à Vienne (\textbf{Autriche}) au laboratoire d’électrotechnique de l’Energy Base. Caractérisation des pertes en commutation de modules IGBTs pour un onduleur 4 phases (3P+N), bobinage de transformateurs sur-mesure pour l'étage d'alimentation à découpage, conception d'un système d'application de pâte thermique par screen-printing (conception mécanique et validation des performances thermiques), et conception d'une alimentation de microcontrôleur (conception du PCB sous KiCAD).}
 	
-	\cvitem{2018 (6 mois)}{Stage long en recherche en vidéo-compression au sein de l’équipe VAADER (laboratoire IETR au sein de l’INSA de Rennes), utilisation de CNNs pour la découpe en Quad / Ternary trees au sein de l’encodeur VVC.}
-	\cvitem{2018--2020}{\textbf{Ingénieur en Recherche et Développement} chez Biosency, entreprise développant une solution de télésuivi en ambulatoire pour les patients en insuffisance respiratoire (DM).}
+	\cvitem{2018 (6 mois)}{Stage long en recherche en vidéo-compression au sein de l’équipe VAADER (laboratoire IETR au sein de l’INSA de Rennes), utilisation de CNNs pour l'optimisation de la découpe en Quad / Ternary trees au sein de l’encodeur VVC (Pytorch pour l'aspect CNNs, C++ pour l'encodeur JEM).}
+	\cvitem{2018--2020}{\textbf{Ingénieur en Recherche et Développement} chez Biosency, entreprise développant une solution de télésuivi en ambulatoire pour les patients en insuffisance respiratoire (DM). Étude bibliographique pour écrire mon sujet de thèse, établissement d'un modèle de charge / décharge pour les batteries du Bora Band, caractérisation spectrale des LEDs utilisées (dérive en longueur d'onde avec la température et / ou l'intensité et évaluation de l'impact de ces dérives sur les performance en spO$_2$).}
 	
-	\cvitem{2020 - \textit{Présent}}{\textbf{Thèse de doctorat} sur la caractérisation transcutanée non-invasive du contenu sanguin en dioxyde de carbone. Partenariat académique / industriel entre Biosency, l’université de Strasbourg (laboratoire ICUBE, CNRS / Unistra) et l’Université de Bretagne Occidentale (laboratoire ORPHY, UBO). Le manuscrit de thèse est \href{https://github.com/e-dervieux/phd_thesis/releases/download/manuscript/thesis_v1.0.pdf}{disponible en ligne} et a donné lieu à la publication de quatre articles de journal\cite{dervieux2020, dervieux2022, dervieux2023rate, dervieux2024phase} et un article de conférence\cite{dervieux2024newcas}.}
+	\cvitem{2020 - \textit{Présent}}{\textbf{Thèse de doctorat} sur la caractérisation transcutanée non-invasive du contenu sanguin en dioxyde de carbone. Partenariat académique / industriel entre Biosency, l’université de Strasbourg (laboratoire ICUBE, CNRS / Unistra) et l’Université de Bretagne Occidentale (laboratoire ORPHY, UBO). Le manuscrit de thèse est \href{https://github.com/e-dervieux/phd_thesis/releases/download/manuscript/thesis_v1.0.pdf}{disponible en ligne} et a donné lieu à la publication de quatre articles de journal\cite{dervieux2020, dervieux2022, dervieux2023rate, dervieux2024phase} et un article de conférence\cite{dervieux2024newcas}.\newline
+	La thèse est très pluridisciplinaire, avec le développement d'instrumentation à des fins de mesure\cite{dervieux2023rate, dervieux2024newcas}, une étude spectrophotométrique sur l'hémoglobine\cite{dervieux2020}, ainsi que du traitement du signal pour l'utilisation d'un schéma de mesure par Dual Lifetime Referencing (DLR)\cite{dervieux2024phase}.}
 	
-	\cvitem{2022 – \textit{Présent}}{\textbf{Missions d'enseignement} à Télécom Physique Strasboug (TPS) et à l’UBO. CMs sur l’architecture des systèmes à microprocesseurs, et initiation à l’impression 3D. TPs de microcontrôleur (Arduino) et FPGA (Quartus).}
-
 	\newpage
 	
+	\cvitem{2022 – \textit{Présent}}{\textbf{Missions d'enseignement} à Télécom Physique Strasboug (TPS), CentraleSupélec, et à l’Université de Bretagne Occidentale (3$^\text{e}$ année de licence et 1$^\text{re}$ année de master). Montée en charge de 40 à \textbf{70~h équivalent TD par an} de 2022 à 2024 (les cours et TPs sont donnés à différentes filières / groupes).}
+	
+	\cvlistitem{\textbf{Cours magistral sur l’architecture des systèmes à microprocesseurs} (10,5~h)~: présentation d'un historique de l'architecture informatique, de la notion de chemin de données et du séquenceur, présentation des notions de cache, processeurs superscalaires (SIMD), multicœurs, ainsi que de la notion de pipeline. Démonstration du passage d'un algorithme simple au code assembleur correspondant, et exécution de ce dernier. Co-conception d'un TD sur la réalisation d'un micro-contrôleur basique\cite{werling2024}.}
+	\cvlistitem{\textbf{TP d'électronique embarqué} (16~h)~: conception d'un station météo utilisant des cartes Arduino. Le TP comprend l'implémentation à la main d'un driver d'écran LCD, et l'analyse de trames I2C, SPI et 1-wire à l'oscilloscope. Il inclut également l'utilisation des timers et des interruptions avec écriture dans les registres correspondant, ainsi que la communication entre deux cartes par liaison UART\cite{madec2022}.}
+	\cvlistitem{\textbf{TP d'électronique programmable} (8~h)~: conception d'un testeur de réflexes sur FPGA (DE-10 et Quartus). Le TP est une introduction à la programmation en VHDL et comprend notamment la génération d'un chronomètre à démarrage aléatoire, à l'aide d'un diviseur de fréquence, de compteurs, et d'un générateur de nombres aléatoires.}
+	\cvlistitem{\textbf{Cours magistral sur la conception et l'impression 3D} (4~h)~: introduction à la conception mécanique et à la modélisation 3D paramétrique. Notions de résistance des matériaux et de concentration de contraintes avec un accent sur l'anisotropie des pièces obtenues par impression 3D. Présentation du fonctionnement d'une imprimante 3D FDM et des paramètres du trancheur. Ce cours est un pré-requis pour que les étudiants puissent utiliser l'imprimante du FabLab de l'UBO.}
+	\cvlistitem{\textbf{Introduction au biomédical} (1,5~h)~: intervention à CentraleSupélec au sein du cours \textit{Défis et enjeux des technologies de l'information et de la communication} (3SQ1010), pour donner aux étudiants une introduction à l'ingénierie biomédicale et aux contraintes réglementaires associées.}
+
 	\section{Compétences}
 	
 	\mysubsection{Linguistiques}
