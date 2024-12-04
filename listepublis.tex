@@ -1,0 +1,37 @@
+% !TeX program = lualatex
+% !TeX TXS-program:bibliography = txs:///biber
+% !TeX encoding = utf8
+% !TeX spellcheck = en_GB
+\documentclass[a4paper, 11pt]{article}
+\usepackage{amsmath}
+\usepackage[margin=2cm]{geometry}
+\usepackage[%
+backend=biber,
+sorting=none,
+style=numeric-comp,
+maxbibnames=99,
+]{biblatex}
+\addbibresource{clean_bibliography.bib}
+
+\usepackage{hyperref}
+
+\title{Publication List}
+\author{Emmanuel Dervieux}
+\date{}
+
+\begin{document}
+	\maketitle
+	\nocite{dervieux2020, dervieux2022, madec2022, dervieux2023rate, werling2024, dervieux2024newcas, dervieux2024phase, dervieux2024patent}
+	
+	My scientific production as of toady---\today---is composed of:
+	\begin{itemize}
+		\item[--] 4 articles in international journals\cite{dervieux2020, dervieux2022, dervieux2023rate, dervieux2024phase} (4/4 first author)
+		\item[--] 1 article in an international conference\cite{dervieux2024newcas} (1/1 first author)
+		\item[--] 1 patent application\cite{dervieux2024patent} (1/1 first inventor)
+		\item[--] 2 educational articles in a local conference (CNFM)\cite{madec2022, werling2024} (0/2 first author)
+	\end{itemize}
+	
+	
+	\printbibliography
+	
+\end{document}
